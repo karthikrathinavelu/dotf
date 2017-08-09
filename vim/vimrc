@@ -18,7 +18,7 @@ set background=dark         " Set background to dark to make terminal Vim happy
 colorscheme molokai         " Use molokai colorscheme
 
 filetype plugin indent on   " Load plugins and indentation info according to filetype
-syntax on                   " Enable syntax highlighting
+syntax enable               " Enable syntax highlighting
 
 set autoindent              " Indent according to previous line
 set smartindent             " Be smart about the indentation
@@ -119,6 +119,7 @@ set wildmode=list:longest   " Menu list works like shell
 autocmd BufNewFile,BufRead *.*proj set filetype=xml
 autocmd BufNewFile,BufRead *.props set filetype=xml
 autocmd BufNewFile,BufRead *.targets set filetype=xml
+autocmd BufNewFile,BufRead *.config set filetype=xml
 
 " Don't expand tabs on make files
 autocmd FileType make setlocal noexpandtab
