@@ -98,6 +98,10 @@ set timeoutlen=300      " Default timeout length to 300 milliseconds
 inoremap jk <Esc>
 vnoremap jk <Esc>
 
+" Ensure <Up> and <Down> works on the displayed line instead of actual physical line in the file
+nnoremap j gj
+nnoremap k gk
+
 packadd! matchit             " Load matchit macro to match html/xml tags with %
 set matchpairs+=<:>          " Adding < > as a matching pair when using % key
 
