@@ -12,7 +12,12 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 set encoding=utf-8          " Default encoding of files are utf-8
+set fileencoding=utf-8      " Set the encoding for the file in this buffer
+set fileencodings=utf-8     " Set the list of encodings to use while opening a buffer
+set bomb                    " Set Byte Order Marker (BOM) on
 scriptencoding utf-8        " Set script's encoding to utf-8
+
+set fileformats=dos,unix,mac    " Try the said fileformats during EOL automatic detection
 
 set background=dark         " Set background to dark to make terminal Vim happy
 colorscheme molokai         " Use molokai colorscheme
@@ -71,7 +76,7 @@ set textwidth=180           " Set a higher textwidth
 set number                  " Show line numbers
 set relativenumber          " Show line number relative to the current line
 
-set clipboard=unnamed       " Yanking lines gets copied to system clipboard as well
+set clipboard=unnamed,unnamedplus       " Yanking lines gets copied to system clipboard as well
 
 set list                    " Show whitespace characters
 " Show the mentioned characters instead of the default
@@ -98,7 +103,7 @@ set timeoutlen=300      " Default timeout length to 300 milliseconds
 inoremap jk <Esc>
 vnoremap jk <Esc>
 
-" Ensure <Up> and <Down> works on the displayed line instead of actual physical line in the file
+" Ensure <Up> and <Down> works on the displayed line (in case of wrap being set) instead of actual physical line in the file
 nnoremap j gj
 nnoremap k gk
 
@@ -158,3 +163,20 @@ noremap <leader>tp :tabprevious<cr>
 noremap <leader>tf :tabfirst<cr>
 noremap <leader>tl :tablast<cr>
 noremap <leader>tm :tabmove
+
+" Saner cut/copy/paste to work across system apps
+noremap YY "+y<cr>
+noremap <leader>p "+gP<cr>
+noremap XX "+x<cr>
+
+" Abbreviation for common typos
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
