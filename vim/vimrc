@@ -1,4 +1,4 @@
-set nocompatible            " vi defaults off, vim defaults on
+ï»¿set nocompatible            " vi defaults off, vim defaults on
 
 " Unmap arrow keys in both normal and insert mode
 inoremap <Up> <NOP>
@@ -17,10 +17,11 @@ set fileencodings=utf-8     " Set the list of encodings to use while opening a b
 set bomb                    " Set Byte Order Marker (BOM) on
 scriptencoding utf-8        " Set script's encoding to utf-8
 
+set renderoptions=type:directx
+
 set fileformats=dos,unix,mac    " Try the said fileformats during EOL automatic detection
 
 set background=dark         " Set background to dark to make terminal Vim happy
-colorscheme molokai         " Use molokai colorscheme
 
 filetype plugin indent on   " Load plugins and indentation info according to filetype
 syntax enable               " Enable syntax highlighting
@@ -84,7 +85,7 @@ set list                    " Show whitespace characters
 " <C-k>NO for eol
 " <C-k>>> for extends
 " <C-k><< for precedes
-set listchars=tab:>\ ,trail:·,extends:»,precedes:«,eol:¬
+set listchars=tab:>\ ,trail:Â·,extends:Â»,precedes:Â«,eol:Â¬
 
 set linespace=0             " Set spacing between lines to be 0
 set scrolloff=2             " While scrolling pages keep the last 3 lines in context
