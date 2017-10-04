@@ -1,4 +1,4 @@
-set nocompatible            " vi defaults off, vim defaults on
+ï»¿set nocompatible            " vi defaults off, vim defaults on
 
 " Unmap arrow keys in both normal and insert mode
 inoremap <Up> <NOP>
@@ -20,7 +20,7 @@ scriptencoding utf-8        " Set script's encoding to utf-8
 set fileformats=dos,unix,mac    " Try the said fileformats during EOL automatic detection
 
 set background=dark         " Set background to dark to make terminal Vim happy
-colorscheme molokai         " Use molokai colorscheme
+    colorscheme molokai         " Use molokai colorscheme
 
 filetype plugin indent on   " Load plugins and indentation info according to filetype
 syntax enable               " Enable syntax highlighting
@@ -84,7 +84,7 @@ set list                    " Show whitespace characters
 " <C-k>NO for eol
 " <C-k>>> for extends
 " <C-k><< for precedes
-set listchars=tab:>\ ,trail:·,extends:»,precedes:«,eol:¬
+set listchars=tab:>\ ,trail:Â·,extends:Â»,precedes:Â«,eol:Â¬
 
 set linespace=0             " Set spacing between lines to be 0
 set scrolloff=2             " While scrolling pages keep the last 3 lines in context
@@ -180,3 +180,8 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
+nnoremap <leader><space>b :%s/\.\.\\.*CxCache.*Base.*-develop/$(PkgMgmt_RecoverySvcs_Common_Base)<cr>
+nnoremap <leader><space>c :%s/\.\.\\.*CxCache.*Cloud.*-develop/$(PkgMgmt_RecoverySvcs_Common_Cloud)<cr>
+nnoremap <leader><space>s :%s/\.\.\\.*CxCache.*Service.*-develop/$(PkgMgmt_RecoverySvcs_Common_Service)<cr>
+nnoremap <leader><space>m :%s/\.\.\\.*CxCache.*Monitoring.ClientLib.*-develop/$(PkgMgmt_RecoverySvcs_Monitoring_ClientLib)<cr>
+nnoremap <leader><space>p :%s/\.\.\\.*CxCache.*Provisioning.Service.ClientLib.*-develop/$(PkgMgmt_RecoverySvcs_Provisioning_Service_ClientLib)<cr>
