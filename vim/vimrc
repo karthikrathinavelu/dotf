@@ -17,10 +17,11 @@ set fileencodings=utf-8     " Set the list of encodings to use while opening a b
 set bomb                    " Set Byte Order Marker (BOM) on
 scriptencoding utf-8        " Set script's encoding to utf-8
 
+set renderoptions=type:directx
+
 set fileformats=dos,unix,mac    " Try the said fileformats during EOL automatic detection
 
 set background=dark         " Set background to dark to make terminal Vim happy
-    colorscheme molokai         " Use molokai colorscheme
 
 filetype plugin indent on   " Load plugins and indentation info according to filetype
 syntax enable               " Enable syntax highlighting

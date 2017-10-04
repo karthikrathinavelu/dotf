@@ -1,1 +1,6 @@
 set guioptions-=T
+colorscheme molokai
+if has("win32")
+    set guifont=Consolas:h13
+    au GUIEnter * simalt ~x
+endif

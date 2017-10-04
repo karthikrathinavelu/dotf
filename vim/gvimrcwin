@@ -1,2 +1,0 @@
-set guifont=Consolas:h13
-au GUIEnter * simalt ~x
