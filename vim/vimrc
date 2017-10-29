@@ -181,8 +181,8 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-nnoremap <leader><space>b :%s/\.\.\\.*CxCache.*Base.*-develop/$(PkgMgmt_RecoverySvcs_Common_Base)<cr>
-nnoremap <leader><space>c :%s/\.\.\\.*CxCache.*Cloud.*-develop/$(PkgMgmt_RecoverySvcs_Common_Cloud)<cr>
-nnoremap <leader><space>s :%s/\.\.\\.*CxCache.*Service.*-develop/$(PkgMgmt_RecoverySvcs_Common_Service)<cr>
-nnoremap <leader><space>m :%s/\.\.\\.*CxCache.*Monitoring.ClientLib.*-develop/$(PkgMgmt_RecoverySvcs_Monitoring_ClientLib)<cr>
-nnoremap <leader><space>p :%s/\.\.\\.*CxCache.*Provisioning.Service.ClientLib.*-develop/$(PkgMgmt_RecoverySvcs_Provisioning_Service_ClientLib)<cr>
+nnoremap <leader><space>b :%s/\.\.\\.*CxCache.*Base.*-\(develop\|mgmt\)/$(PkgMgmt_RecoverySvcs_Common_Base)<cr>
+nnoremap <leader><space>c :%s/\.\.\\.*CxCache.*Cloud.*-\(develop\|mgmt\)/$(PkgMgmt_RecoverySvcs_Common_Cloud)<cr>
+nnoremap <leader><space>s :%s/\.\.\\.*CxCache.*Service.*-\(develop\|mgmt\)/$(PkgMgmt_RecoverySvcs_Common_Service)<cr>
+nnoremap <leader><space>m :%s/\.\.\\.*CxCache.*Monitoring.ClientLib.*-\(develop\|mgmt\)/$(PkgMgmt_RecoverySvcs_Monitoring_ClientLib)<cr>
+nnoremap <leader><space>p :%s/\.\.\\.*CxCache.*Provisioning.Service.ClientLib.*-\(develop\|mgmt\)/$(PkgMgmt_RecoverySvcs_Provisioning_Service_ClientLib)<cr>
