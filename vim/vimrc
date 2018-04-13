@@ -23,9 +23,7 @@ set fileformats=dos,unix,mac    " Try the said fileformats during EOL automatic 
 
 set background=dark         " Set background to dark to make terminal Vim happy
 
-if &term == "win32"
-    colorscheme slate
-endif
+colorscheme slate
 
 filetype plugin indent on   " Load plugins and indentation info according to filetype
 syntax enable               " Enable syntax highlighting
