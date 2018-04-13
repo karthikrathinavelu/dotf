@@ -23,6 +23,10 @@ set fileformats=dos,unix,mac    " Try the said fileformats during EOL automatic 
 
 set background=dark         " Set background to dark to make terminal Vim happy
 
+if &term == "win32"
+    colorscheme slate
+endif
+
 filetype plugin indent on   " Load plugins and indentation info according to filetype
 syntax enable               " Enable syntax highlighting
 
@@ -63,8 +67,6 @@ set lazyredraw              " Only redraw when necessary
 
 set splitbelow              " Open new window below the current window
 set splitright              " Open new window right of the current window
-
-set cursorline              " Find the current line a lot quicker
 
 set wrapscan                " Searched wrap around end of file
 set nowrap                  " Don't wrap lines if it is longer
