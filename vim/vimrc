@@ -170,6 +170,9 @@ noremap YY "+y<cr>
 noremap <leader>p "+gP<cr>
 noremap XX "+x<cr>
 
+" Open links using leader instead of Ctrl-]
+noremap <leader>o <C-]>
+
 " Abbreviation for common typos
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
