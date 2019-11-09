@@ -14,7 +14,7 @@ noremap <Right> <NOP>
 set encoding=utf-8          " Default encoding of files are utf-8
 set fileencoding=utf-8      " Set the encoding for the file in this buffer
 set fileencodings=utf-8     " Set the list of encodings to use while opening a buffer
-set bomb                    " Set Byte Order Marker (BOM) on
+"set bomb                    " Set Byte Order Marker (BOM) on
 scriptencoding utf-8        " Set script's encoding to utf-8
 
 set renderoptions=type:directx
