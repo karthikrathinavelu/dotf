@@ -107,6 +107,11 @@ vnoremap jk <Esc>
 " Ensure <Up> and <Down> works on the displayed line (in case of wrap being set) instead of actual physical line in the file
 nnoremap j gj
 nnoremap k gk
+" Make Y consistent with C and D
+nnoremap Y y$
+" Make n always search forward and N backwards
+nnoremap <expr> n 'Nn'[v:searchforward]
+nnoremap <expr> N 'nN'[v:searchforward]
 
 packadd! matchit             " Load matchit macro to match html/xml tags with %
 set matchpairs+=<:>          " Adding < > as a matching pair when using % key
